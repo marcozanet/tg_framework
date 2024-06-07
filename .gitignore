@@ -1,0 +1,9 @@
+# ignore folds: 
+model_weights/
+results/
+testing_data/
+__pycache__/
+.pytest_cache/
+
+# ignore files: 
+code.log

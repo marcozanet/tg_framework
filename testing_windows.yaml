@@ -1,0 +1,41 @@
+inference:
+  augment: false
+  classify: false
+  conf_thres: 0.8
+  create_grayscale_masks: true
+  device: cpu
+  input_dir: "G:\\marco\\tg_may\\tg_framework_train\\testing_data"
+  model: yolo
+  output_dir: null
+  repository_dir: "G:\\marco\\tg_may\\tg_framework"
+  save_crop: false
+  save_imgs: true
+  save_txt: true
+  task: segmentation
+  trained_model_weights: "G:\\marco\\tg_may\\tg_framework_train\\model_weights\\segm\\best.pt"
+  yolov5dir: "C:\\marco\\yolov5"
+
+
+
+
+
+readme: >
+  input_dir: path to the image or directory to be inferred. If directory, all
+   images within directory will be inferred. NB: apart from testing, img_fp will overwrite this param.
+  augment: whether augmentation should be applied during inference to increase accuracy (requires more time/power) 
+  classify: whether to apply classification or not. Not fully tested yet. 
+  conf_thres: if confidence>conf_thres, then the image is infered as glom. Set conf_thres by looking at
+   the F1 curve of the experiment. For current segm model set conf_thres = 0.8.
+  create_grayscale_masks: if True, grayscale images are created with [0, 1] values
+   (0 = background pixels, 1 = glom pixels)  
+  device: device to run the model on. Can be either 'cpu' or 'gpu'. 
+  model: yolo (no other models available at the moment)
+  output_dir: null; if null, results will be saved to /results/out_TASK depending
+   on the TASK (detection or segmentation) 
+  repository_dir: path to the current repository used (tg_framework) 
+  save_crop: if true, crops of the inferred gloms are saved in a folder called crops. 
+  save_imgs: if true, output images that show bounding box, segmentation area and confidence of predictions
+  save_txt: true, saves a txt file with the output inferred objets. It's necessary to get the grayscale binary images.
+  task: segmentation or detection. Fully tested for segmentation, also works on detection, but output grayscale images are still to be fixed.
+  trained_model_weights: weights of the trained model to be used during inference
+  yolov5dir: /Users/marco/yolov5"

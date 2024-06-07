@@ -1,0 +1,35 @@
+""" 
+
+1) INSTALLATION
+   - CLONE YOLOV5 REPOSITYORY: 
+      git clone https://github.com/ultralytics/yolov5  # clone
+
+   - CREATE CONDA ENVIRONMENT TO HANDLE PACKAGES TO BE USED:
+      conda create -n <environment_name>
+      cd yolov5
+      pip install -r requirements.txt  # install packages needed by yolov5
+      pip install pytest
+
+2) SETUP 
+   - DEPENDING ON THE SYSTEM USED, EDIT THE testing_SYSTEM.yaml AND testing_safe_SISTEM.yaml IN THE FOLLOWING FIELDS:
+      input_dir: path to testing_data.
+      repository_dir: path to the tg_framework repository.
+      trained_model_weights: path to the segmentation model.
+      yolov5dir: path to the yolov5 dir.
+
+3) RUN TESTS
+   - 1. QUICK TESTING: 
+      run the file test_infere_once.py
+   - 2. FULL TESTING: 
+      run the file run_tests.py
+
+4) SET UP FOR ACTUAL USE OF THE FRAMEWORK TO PREDICT ON NEW IMAGES: 
+   -  edit the file config.yaml with the right paths as previously done in step 2) SETUP for testing yaml files.
+   -  edit the config.yaml file with the desired parameters (keep classify to 'false' and model to 'yolo')
+
+5) RUN 
+   - run the file run.py
+
+   
+
+"""

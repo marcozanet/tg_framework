@@ -1,0 +1,35 @@
+inference:
+  augment: false
+  classify: false
+  conf_thres: 0.8
+  create_grayscale_masks: true
+  device: cpu
+  input_dir: /Users/marco/tg/tg_framework/testing_data/I_1_S_3_ROI_2_PAS_sample0_1_3.png
+  model: yolo
+  output_dir: null
+  repository_dir: /Users/marco/tg/tg_framework
+  save_crop: false
+  save_imgs: true
+  save_txt: true
+  task: segmentation
+  trained_model_weights: /Users/marco/tg/tg_framework/model_weights/segm/best.pt
+  yolov5dir: /Users/marco/yolov5
+readme: "input_dir: path to the image or directory to be inferred. If directory, all\n\
+  \ images within directory will be inferred. NB: apart from testing, img_fp will\
+  \ overwrite this param.\naugment: whether augmentation should be applied during\
+  \ inference to increase accuracy (requires more time/power)  classify: whether to\
+  \ apply classification or not. Not fully tested yet.  conf_thres: if confidence>conf_thres,\
+  \ then the image is infered as glom. Set conf_thres by looking at\n the F1 curve\
+  \ of the experiment. For current segm model set conf_thres = 0.8.\ncreate_grayscale_masks:\
+  \ if True, grayscale images are created with [0, 1] values\n (0 = background pixels,\
+  \ 1 = glom pixels)  \ndevice: device to run the model on. Can be either 'cpu' or\
+  \ 'gpu'.  model: yolo (no other models available at the moment) output_dir: null;\
+  \ if null, results will be saved to /results/out_TASK depending\n on the TASK (detection\
+  \ or segmentation) \nrepository_dir: path to the current repository used (tg_framework)\
+  \  save_crop: if true, crops of the inferred gloms are saved in a folder called\
+  \ crops.  save_imgs: if true, output images that show bounding box, segmentation\
+  \ area and confidence of predictions save_txt: true, saves a txt file with the output\
+  \ inferred objets. It's necessary to get the grayscale binary images. task: segmentation\
+  \ or detection. Fully tested for segmentation, also works on detection, but output\
+  \ grayscale images are still to be fixed. trained_model_weights: weights of the\
+  \ trained model to be used during inference yolov5dir: /Users/marco/yolov5\"\n"
